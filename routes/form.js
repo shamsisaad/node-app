@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/submit", (req, res) => {
-    res.send(`Submitted`);
+    res.send(req.body);
 });
 
 module.exports = router;
