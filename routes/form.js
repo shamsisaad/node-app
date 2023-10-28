@@ -3,13 +3,15 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
     res.send(`
-        <form>
+        <form action="/form/submit" method="POST">
             <input name="data" />
             <button>Submit</button>
         </form>
     `);
-})
+});
 
-
+router.post("/submit", (req, res) => {
+    res.send(`Submitted`);
+});
 
 module.exports = router;
