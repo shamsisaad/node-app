@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 
-const form = require("./routes/form");
-const { log } = require("console");
+const productsRoutes = require("./routes/products");
+const path = require("path");
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/form", form);
+app.use("/product", productsRoutes);
 
 app.use("/", (req, res) => {
     res.render("home", {user: "Shamsi"});
