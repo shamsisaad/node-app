@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 app.use("/form", form);
 
 app.use("/", (req, res) => {
-    res.render("home");
+    res.render("home", {user: "Shamsi"});
 });
 
 app.listen(3000)
