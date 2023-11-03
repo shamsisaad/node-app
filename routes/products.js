@@ -3,9 +3,7 @@ const path = require("path");
 
 const router = express.Router();
 
-router.post("/form", (req, res, next) => {
-    res.send(req.body);
-});
+router.post("/form", );
 
 router.get("/form", (req, res, next) => {
     res.sendFile(path.join(process.cwd(), "views", "form.html"));
