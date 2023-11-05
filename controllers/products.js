@@ -1,10 +1,18 @@
+const products = [];
+
+
 exports.getAddProduct = (req, res) => {
-    res.sendFile("form");
+    res.sendFile("form", {title: "Add Product Form"});
 };
 
 
 
 exports.postAddProduct = (req, res) => {
-    res.send(req.body);
+    products.push(req.body);
+    res.send("saved");
+};
+
+exports.fetchAll = (req, res) => {
+    res.send(products);
 };
 
