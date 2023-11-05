@@ -1,5 +1,5 @@
 exports.getAddProduct = (req, res) => {
-    res.sendFile(path.join(process.cwd(), "views", "form.html"));
+    res.sendFile("form");
 };
 
 
