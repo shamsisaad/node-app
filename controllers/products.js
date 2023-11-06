@@ -1,5 +1,5 @@
 
-const products = [];
+
 
 
 exports.getAddProduct = (req, res) => {
