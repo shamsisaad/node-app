@@ -1,10 +1,11 @@
-
-
-
-
+const Product = require("../model/product");
 exports.getAddProduct = (req, res) => {
     res.sendFile("form", {title: "Add Product Form"});
 };
+
+
+
+
 
 
 

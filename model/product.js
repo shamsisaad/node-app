@@ -1,4 +1,4 @@
-const { fetchAll } = require("../controllers/products");
+// const { fetchAll } = require("../controllers/products");
 
 const products = [];
 
@@ -8,14 +8,13 @@ class Product {
     }
 
 save() {
-    products.push({title: this.title})
+    products.push({title: this.title});
     
 }
 
 static fetchAll () {
-
+    return products;
 }
 }
 
-const product = new Product("Title");
-product.save()
+module.exports = Product;
