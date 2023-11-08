@@ -6,9 +6,9 @@ const router = express.Router();
 
 router.get("/", productsController.fetchAll);
 
-router.post("/form", productsController.getAddProduct);
+router.get("/form", productsController.getAddProduct);
 
-router.get("/form", productsController.postAddProduct);
+router.post("/form", productsController.postAddProduct);
 
 
 module.exports = router;
